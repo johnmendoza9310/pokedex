@@ -1,0 +1,151 @@
+<body class="pokedex">
+  <img src="../../../assets/pokedex/pokedex-fondo.jpg" alt="" class="fondo">
+
+ 
+
+    <div class="pokemon-list"  >
+
+        <img class="logo" src="../../../assets/pokedex/logoPokemon.png" alt="">
+
+        <div class="pokemon-name" *ngFor="let pokemon of datosPokemon" (click)="seeFeatures(pokemon.urlFiltrada)">
+            <img [src]="pokemon.imagen" alt="" class="pokemon-img">
+            <div class="name">{{pokemon.nombreFiltrado}}</div>
+
+        </div>
+
+
+        <div class="paginator">
+
+           
+            
+
+        <input class="left_arrow" id="arrows" type="image" src="../../../assets/pokedex/flecha_izquierda.png" (click)=backPaginator() >
+        <input class="rigth_arrow" id="arrows" type="image" src="../../../assets/pokedex/flecha_derecha.png" (click)=nextPaginator()>
+          
+    
+    </div>
+   
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+<div id="pokemon-char" *ngIf="noImage===true">
+
+    <form autocomplete="off" [formGroup]="forma" (ngSubmit)="search()">
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Search Pokemon </span>
+            </div>
+            <input  type="text" 
+                     class="form-control" 
+                     placeholder="Pokemon Name"  
+                     formControlName="pokemon">
+
+
+
+            <button type="submit"  class="btn btn-primary" >Search</button>
+
+          </div>
+
+    </form>
+
+
+    <div class="pokemon-char" *ngFor="let pokemon of pokemonSelectChar" >
+
+   
+
+        
+
+        <img [src]="pokemon.img" alt="" >
+
+        <div class="char"  >
+            
+            <h1 >ID: {{pokemon.id}} </h1>
+            <h1 >NAME: {{pokemon.name}} </h1>
+            <h1 >TYPE: {{pokemon.type}} </h1>
+            <h1 >ABILITY: {{pokemon.abilities}} </h1>
+        </div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div id="pokemon-char" *ngIf="noImage===false">
+
+
+    <form autocomplete="off" [formGroup]="forma" (ngSubmit)="search()">
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Search Pokemon </span>
+            </div>
+
+            
+            <input  type="text" 
+                     class="form-control" 
+                     placeholder="Pokemon Name"  
+                     formControlName="pokemon"
+                     id="input">
+                     
+                     
+                     <button type="submit"  class="btn btn-primary" >Search</button>
+
+
+
+          </div>
+          <small id="small" *ngIf="nombreNoValido" class="small">Digite solo letras (Minimo 3)</small>
+
+
+    </form>
+
+
+    <div class="pokemon-char">
+
+        
+
+        <img src="../../../assets/pokedex/ash.jpg" alt="" >
+
+        <div class="char"  >
+
+            <h1 class="click">PLEASE CLICK IN A POKEMON </h1>
+            <hr>
+            <br>
+            <h1 >ID: Waiting Id </h1>
+            <h1 >NAME: Waiting Name </h1>
+            <h1 >TYPE: Waiting Type </h1>
+            <h1 >ABILITY: Waiting Ability </h1>
+        </div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+</body>
+
+
+
+   

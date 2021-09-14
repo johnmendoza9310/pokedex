@@ -1,0 +1,167 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    -webkit-box-sizing: border;
+    -moz-box-sizing: border;
+    box-sizing: border;
+
+  }
+
+  body { font-family: "Gill Sans Extrabold", Helvetica, sans-serif }
+
+
+
+.pokedex{
+width: 100%;
+background-size: 100% 100%;
+position: relative;
+display: flex;
+flex-direction: row;
+
+}
+.fondo{
+    position: absolute;
+    opacity: 0.5;
+    width: 100%;
+    z-index:1;
+    margin: auto 0;
+    height: 150vh;
+
+}
+
+
+.pokemon-list{
+    width: 50%;
+    z-index:2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding:20px 0;
+
+    background-color: rgba(255, 25, 25, 0.3);
+    border: 5px solid black;
+}
+
+#pokemon-char{
+
+    width: 50%;
+    z-index:2;
+    display: flex;
+    background-color: rgba(255, 25, 25, 0.3);
+    border: 5px solid black;
+    padding-top: 30px;
+    flex-direction: column;
+    
+}
+
+.pokemon-char img{
+    width: 70%;
+    margin: 0 auto;
+   
+    display: block;
+   background-color: rgb(255, 249, 254,.7);
+   border: 7px solid black;
+
+    z-index:2;
+    margin-top: 40px;
+
+
+}
+
+.pokemon-char .char{
+
+  margin-top: 20%;
+  margin-left: 10px;
+
+
+
+}
+
+.pokemon-name{
+    width: 20%;
+    padding: 1%;
+    margin: 2px;
+    border: 2px solid #000;
+    cursor:pointer;
+    background-color: rgb(255, 249, 254,.7)
+    
+}
+
+.pokemon-name img{
+
+    width: 100%;
+}
+
+
+.paginator{
+    margin-top: 20px;
+    width: 100%;
+    background-color: rgb(255, 249, 254,.7);
+    justify-content: center;
+    opacity: .8;
+}
+
+
+.left_arrow{
+
+    margin-left: 30%;
+}
+
+
+.rigth_arrow{
+
+    margin-left: 10%;
+    margin-top: 5px;
+
+
+}
+
+.rigth_arrow:hover{
+
+   background-color:rgba(44, 243, 144, 0.7);
+   background-size: 50%;
+
+
+}
+
+.left_arrow:hover{
+
+    background-color:rgba(44, 243, 144, 0.7);
+    background-size: 50%;
+ 
+ 
+ }
+
+
+#arrows{
+    width: 8%;
+}
+
+
+.name{
+
+    text-transform: uppercase;
+    font-size:7px;
+    text-align: center;
+}
+
+
+.logo{
+    width: 80%;
+}
+
+
+.click{
+    text-align: center;
+    font-weight: bolder;
+}
+
+#small{
+
+    color: black;
+    margin-top: 0;
+
+}
+
+
